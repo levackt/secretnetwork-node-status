@@ -1,0 +1,56 @@
+{
+  "mainnet": [
+    {
+      "name": "Trivium Network",
+      "price": "Free",
+      "rpcEndpoint": "https://rpc.roninventures.io/",
+      "lcdEndpoint": "https://api.roninventures.io/",
+      "grpcWebEndpoint": "https://web-rpc.roninventures.io/",
+      "websiteURL": "https://trivium.network",
+      "website": "Trivium Network",
+      "chainId": "pulsar-2"
+    },
+    {
+      "name": "Griptape.JS",
+      "price": "Free",
+      "rpcEndpoint": "https://rpc.pulsar.griptapejs.com/",
+      "lcdEndpoint": "https://lcd.pulsar.griptapejs.com/",
+      "grpcWebEndpoint": "http://rpc.pulsar.griptapejs.com:9091/",
+      "website": "https://griptapejs.com",
+      "websiteURL": "https://griptapejs.com",
+      "chainId": "pulsar-2"
+    },
+    {
+      "name": "Griptape.JS 2",
+      "price": "Free",
+      "rpcEndpoint": "https://rpc.pulsar.griptapejs.com/",
+      "lcdEndpoint": "https://lcd.pulsar.griptapejs.com/",
+      "grpcWebEndpoint": "http://rpc.pulsar.griptapejs.com:9091/",
+      "website": "https://griptapejs.com",
+      "websiteURL": "https://griptapejs.com",
+      "chainId": "pulsar-2"
+    }
+  ],
+  "testnet": [
+    {
+      "name": "Trivium Network",
+      "price": "Free",
+      "rpcEndpoint": "https://testnet-rpc.roninventures.io/",
+      "lcdEndpoint": "https://testnet-api.roninventures.io/",
+      "grpcWebEndpoint": "https://testnet-web-rpc.roninventures.io/",
+      "website": "https://trivium.network/",
+      "websiteURL": "https://trivium.network/",
+      "chainId": "pulsar-2"
+    },
+    {
+      "name": "Griptape.JS",
+      "price": "Free",
+      "rpcEndpoint": "https://rpc.pulsar.griptapejs.com/",
+      "lcdEndpoint": "https://lcd.pulsar.griptapejs.com/",
+      "grpcWebEndpoint": "http://rpc.pulsar.griptapejs.com:9091/",
+      "website": "https://griptapejs.com",
+      "websiteURL": "https://griptapejs.com",
+      "chainId": "pulsar-2"
+    }
+  ]
+}
