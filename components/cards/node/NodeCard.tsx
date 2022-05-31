@@ -1,3 +1,4 @@
+import TrafficOutlinedIcon from '@mui/icons-material/TrafficOutlined';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
@@ -7,7 +8,6 @@ import CircularProgress from '@mui/material/CircularProgress';
 import Snackbar from '@mui/material/Snackbar';
 import Typography from '@mui/material/Typography';
 import React, { useEffect } from 'react';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
 import styles from './NodeCard.module.css';
 import { NodeStatus, NodeType } from './NodeStatus';
 
@@ -35,7 +35,6 @@ const NodeCard: React.FC<INodeCard> = ({
   rpcEndpoint,
   lcdEndpoint,
   grpcWebEndpoint,
-  wsEndpoint,
   chainId,
   website,
   websiteURL,
@@ -114,17 +113,14 @@ const NodeCard: React.FC<INodeCard> = ({
         </div>
         <Card sx={{ minWidth: 275 }} className={styles.card}>
           <CardContent>
-            <Snackbar
-              open={open}
-              autoHideDuration={1000}
-              onClose={handleClose}
-              message="URL copied"
-            />
-            {fetching && <CircularProgress color="secondary" />}
-            <Typography sx={{ fontSize: 14 }} color="text.primary" gutterBottom>
+            <Typography
+              sx={{ fontSize: 14 }}
+              color="text.primary"
+              gutterBottom
+              variant="body2"
+            >
               {name}
             </Typography>
-
             <Typography
               sx={{ fontSize: 14 }}
               color="text.secondary"
@@ -136,30 +132,17 @@ const NodeCard: React.FC<INodeCard> = ({
               <Box
                 sx={{
                   display: 'flex',
-                  alignItems: 'bottom',
-                  justifyContent: 'space-between',
+                  justifyContent: 'left',
                   p: 1,
                 }}
               >
                 <Typography sx={{ mb: 1.5 }} color="text.primary">
                   RPC
                 </Typography>
-                <Typography
-                  sx={{ mb: 1.5 }}
-                  color={rpcStatus ? 'green' : 'red'}
-                >
-                  {rpcStatus ? 'Working' : 'Down'}
+                <TrafficOutlinedIcon color={rpcStatus ? 'success' : 'error'} />
+                <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                  {rpcEndpoint}
                 </Typography>
-                <div>
-                  <CopyToClipboard
-                    text={rpcEndpoint}
-                    onCopy={(event: any) => handleOpen(event)}
-                  >
-                    <Button style={{ textTransform: 'lowercase' }}>
-                      {rpcEndpoint}
-                    </Button>
-                  </CopyToClipboard>
-                </div>
               </Box>
             )}
 
@@ -167,20 +150,14 @@ const NodeCard: React.FC<INodeCard> = ({
               <Box
                 sx={{
                   display: 'flex',
-                  alignItems: 'bottom',
-                  justifyContent: 'space-between',
+                  justifyContent: 'left',
                   p: 1,
                 }}
               >
                 <Typography sx={{ mb: 1.5 }} color="text.primary">
                   LCD
                 </Typography>
-                <Typography
-                  sx={{ mb: 1.5 }}
-                  color={lcdStatus ? 'green' : 'red'}
-                >
-                  {lcdStatus ? 'Working' : 'Down'}
-                </Typography>
+                <TrafficOutlinedIcon color={lcdStatus ? 'success' : 'error'} />
                 <Typography sx={{ mb: 1.5 }} color="text.secondary">
                   {lcdEndpoint}
                 </Typography>
@@ -191,52 +168,33 @@ const NodeCard: React.FC<INodeCard> = ({
               <Box
                 sx={{
                   display: 'flex',
-                  alignItems: 'bottom',
-                  justifyContent: 'space-between',
+                  justifyContent: 'left',
                   p: 1,
                 }}
               >
                 <Typography sx={{ mb: 1.5 }} color="text.primary">
-                  gRPC Web
+                  gRPC
                 </Typography>
-                <Typography
-                  sx={{ mb: 1.5 }}
-                  color={grpcWebStatus ? 'green' : 'red'}
-                >
-                  {grpcWebStatus ? 'Working' : 'Down'}
-                </Typography>
+                <TrafficOutlinedIcon
+                  color={grpcWebStatus ? 'success' : 'error'}
+                />
                 <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                  {grpcWebStatus}
+                  {grpcWebEndpoint}
                 </Typography>
               </Box>
             )}
-            {/* <Typography variant="body2" id="body">
-              well meaning and kindly.
-              <br />
-              {'"a benevolent smile"'}
-            </Typography> */}
+            {fetching && <CircularProgress color="secondary" />}
           </CardContent>
           <CardActions>
-            <Button size="small" href={websiteURL || website}>
+            <Button
+              style={{ textTransform: 'lowercase' }}
+              size="small"
+              href={websiteURL || website}
+            >
               {website}
             </Button>
           </CardActions>
         </Card>
-        {/* <div className={styles.card__body}>
-          <span className={`${styles.status} ${styles['status-blue']}`}>
-            {status}
-          </span>
-          <h4>{title}</h4>
-          <p>{body}</p>
-        </div>
-        <div className={styles.card__footer}>
-          <div className={styles.user}>
-            <div className={styles.user__info}>
-              <h5>{author}</h5>
-              <small>{time}</small>
-            </div>
-          </div>
-        </div> */}
       </div>
     </div>
   );

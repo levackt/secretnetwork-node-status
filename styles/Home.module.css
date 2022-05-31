@@ -43,6 +43,7 @@
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
+  padding-bottom: 20px;
 }
 
 .title,
@@ -54,6 +55,15 @@
   margin: 4rem 0;
   line-height: 1.5;
   font-size: 1.5rem;
+}
+
+.environment {
+  margin: 0;
+  line-height: 0.5;
+  font-size: 2rem;
+  display: flex;
+  text-align: left;
+  color: grey;
 }
 
 .code {

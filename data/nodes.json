@@ -8,7 +8,7 @@
       "grpcWebEndpoint": "https://web-rpc.roninventures.io/",
       "websiteURL": "https://trivium.network",
       "website": "Trivium Network",
-      "chainId": "pulsar-2"
+      "chainId": "secret-4"
     },
     {
       "name": "Griptape.JS",
@@ -18,7 +18,7 @@
       "grpcWebEndpoint": "http://rpc.pulsar.griptapejs.com:9091/",
       "website": "https://griptapejs.com",
       "websiteURL": "https://griptapejs.com",
-      "chainId": "pulsar-2"
+      "chainId": "secret-4"
     },
     {
       "name": "Griptape.JS 2",
@@ -28,7 +28,7 @@
       "grpcWebEndpoint": "http://rpc.pulsar.griptapejs.com:9091/",
       "website": "https://griptapejs.com",
       "websiteURL": "https://griptapejs.com",
-      "chainId": "pulsar-2"
+      "chainId": "secret-4"
     }
   ],
   "testnet": [
