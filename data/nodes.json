@@ -3,54 +3,101 @@
     {
       "name": "Trivium Network",
       "price": "Free",
-      "rpcEndpoint": "https://rpc.roninventures.io/",
-      "lcdEndpoint": "https://api.roninventures.io/",
-      "grpcWebEndpoint": "https://web-rpc.roninventures.io/",
       "websiteURL": "https://trivium.network",
       "website": "Trivium Network",
-      "chainId": "secret-4"
+      "chainId": "secret-4",
+      "endpoints": [
+        {
+          "type": "RPC",
+          "url": "https://rpc.roninventures.io/"
+        },
+        {
+          "type": "LCD",
+          "url": "https://api.roninventures.io/"
+        },
+        {
+          "type": "GRPC_WEB",
+          "url": "https://web-rpc.roninventures.io/"
+        }
+      ]
     },
     {
       "name": "Griptape.JS",
       "price": "Free",
-      "rpcEndpoint": "https://rpc.pulsar.griptapejs.com/",
-      "lcdEndpoint": "https://lcd.pulsar.griptapejs.com/",
-      "grpcWebEndpoint": "http://rpc.pulsar.griptapejs.com:9091/",
       "website": "https://griptapejs.com",
       "websiteURL": "https://griptapejs.com",
-      "chainId": "secret-4"
-    },
-    {
-      "name": "Griptape.JS 2",
-      "price": "Free",
-      "rpcEndpoint": "https://rpc.pulsar.griptapejs.com/",
-      "lcdEndpoint": "https://lcd.pulsar.griptapejs.com/",
-      "grpcWebEndpoint": "http://rpc.pulsar.griptapejs.com:9091/",
-      "website": "https://griptapejs.com",
-      "websiteURL": "https://griptapejs.com",
-      "chainId": "secret-4"
+      "chainId": "secret-4",
+      "endpoints": [
+        {
+          "type": "RPC",
+          "url": "https://rpc.pulsar.griptapejs.com/"
+        },
+        {
+          "type": "LCD",
+          "url": "https://lcd.pulsar.griptapejs.com/"
+        },
+        {
+          "type": "GRPC_WEB",
+          "url": "http://rpc.pulsar.griptapejs.com:9091/"
+        }
+      ]
     }
   ],
   "testnet": [
     {
       "name": "Trivium Network",
       "price": "Free",
-      "rpcEndpoint": "https://testnet-rpc.roninventures.io/",
-      "lcdEndpoint": "https://testnet-api.roninventures.io/",
-      "grpcWebEndpoint": "https://testnet-web-rpc.roninventures.io/",
       "website": "https://trivium.network/",
       "websiteURL": "https://trivium.network/",
-      "chainId": "pulsar-2"
+      "chainId": "pulsar-2",
+      "endpoints": [
+        {
+          "type": "RPC",
+          "url": "https://testnet-rpc.roninventures.io/"
+        },
+        {
+          "type": "LCD",
+          "url": "https://testnet-api.roninventures.io/"
+        },
+        {
+          "type": "GRPC_WEB",
+          "url": "https://testnet-web-rpc.roninventures.io/"
+        }
+      ]
     },
     {
       "name": "Griptape.JS",
       "price": "Free",
-      "rpcEndpoint": "https://rpc.pulsar.griptapejs.com/",
-      "lcdEndpoint": "https://lcd.pulsar.griptapejs.com/",
-      "grpcWebEndpoint": "http://rpc.pulsar.griptapejs.com:9091/",
       "website": "https://griptapejs.com",
       "websiteURL": "https://griptapejs.com",
-      "chainId": "pulsar-2"
+      "chainId": "pulsar-2",
+      "endpoints": [
+        {
+          "type": "RPC",
+          "url": "https://rpc.pulsar.griptapejs.com/"
+        },
+        {
+          "type": "LCD",
+          "url": "https://lcd.pulsar.griptapejs.com/"
+        },
+        {
+          "type": "GRPC_WEB",
+          "url": "http://rpc.pulsar.griptapejs.com:9091/"
+        }
+      ]
+    },
+    {
+      "name": "Secure Secrets",
+      "price": "Free",
+      "website": "https://www.securesecrets.org",
+      "websiteURL": "https://www.securesecrets.org",
+      "chainId": "pulsar-2",
+      "endpoints": [
+        {
+          "type": "LCD",
+          "url": "http://testnet.securesecrets.org:1317/"
+        }
+      ]
     }
   ]
 }

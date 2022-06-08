@@ -1,4 +1,4 @@
-const data = require('../../../data/nodes.json');
+const data = require('./nodes.json');
 
 export interface Node {
   name: string;

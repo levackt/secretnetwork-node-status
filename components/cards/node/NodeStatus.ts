@@ -2,19 +2,19 @@ import 'isomorphic-fetch';
 import { SecretNetworkClient } from 'secretjs';
 
 export enum NodeType {
-  LCD = 1,
-  RPC = 2,
-  GRPC = 3,
-  GRPC_WEB = 4,
-  WS = 5,
+  LCD = 'lcd',
+  RPC = 'rpc',
+  GRPC = 'grpc',
+  GRPC_WEB = 'grpc_web',
+  WS = 'ws',
 }
 
 export class NodeStatus {
   endpoint: string;
   type: NodeType;
-  chainId?: string;
+  chainId: string;
 
-  constructor(endpoint: string, type: NodeType, chainId?: string) {
+  constructor(endpoint: string, type: NodeType, chainId: string) {
     this.endpoint = endpoint;
     this.type = type;
     this.chainId = chainId;

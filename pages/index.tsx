@@ -1,8 +1,9 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import React from 'react';
 import NodeCard from '../components/cards/node/NodeCard';
-import { mainnetNodes, testnetNodes } from '../components/cards/node/Nodes';
+import { mainnetNodes, testnetNodes } from '../data/Nodes';
 import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
@@ -28,10 +29,9 @@ const Home: NextPage = () => {
             return (
               <NodeCard
                 name={item.name}
-                rpcEndpoint={item.rpcEndpoint}
-                lcdEndpoint={item.lcdEndpoint}
-                grpcWebEndpoint={item.grpcWebEndpoint}
+                endpoints={item.endpoints}
                 chainId={item.chainId}
+                env="mainnet"
                 website={item.website}
                 websiteURL={item.websiteURL}
                 key={index}
@@ -48,10 +48,9 @@ const Home: NextPage = () => {
             return (
               <NodeCard
                 name={item.name}
-                rpcEndpoint={item.rpcEndpoint}
-                lcdEndpoint={item.lcdEndpoint}
-                grpcWebEndpoint={item.grpcWebEndpoint}
+                endpoints={item.endpoints}
                 chainId={item.chainId}
+                env="testnet"
                 website={item.website}
                 websiteURL={item.websiteURL}
                 key={index}
