@@ -35,6 +35,37 @@
           "url": "http://scrt-validator.digiline.io:9091/"
         }
       ]
+    },
+    {
+      "name": "Azure API",
+      "price": "Free",
+      "chainId": "secret-4",
+      "endpoints": [
+        {
+          "type": "GRPC_WEB",
+          "url": "https://grpc-web.azure-api.net/"
+        }
+      ]
+    },
+    {
+      "name": "Trivium Network",
+      "price": "Free",
+      "website": "https://trivium.network/",
+      "chainId": "secret-4",
+      "endpoints": [
+        {
+          "type": "RPC",
+          "url": "https://secret-4.api.trivium.network:26657/"
+        },
+        {
+          "type": "LCD",
+          "url": "https://secret-4.api.trivium.network:1317/"
+        },
+        {
+          "type": "GRPC_WEB",
+          "url": "https://secret-4.api.trivium.network:9091/"
+        }
+      ]
     }
   ],
   "testnet": [
