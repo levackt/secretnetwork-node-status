@@ -14,7 +14,7 @@ export class NodeStatus {
   type: NodeType;
   chainId: string;
 
-  constructor(endpoint: string, type: NodeType, chainId: string) {
+  constructor(endpoint: string, type: NodeType, chainId: any) {
     this.endpoint = endpoint;
     this.type = type;
     this.chainId = chainId;

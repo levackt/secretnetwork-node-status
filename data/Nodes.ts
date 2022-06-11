@@ -1,11 +1,11 @@
 const data = require('./nodes.json');
-
+export interface IEndpoint {
+  type: string;
+  url: string;
+  status?: boolean;
+}
 export interface Node {
   name: string;
-  rpcEndpoint: string | null;
-  lcdEndpoint?: string | null;
-  grpcEndpoint?: string | null;
-  wsEndpoint?: string | null;
   chainId: string;
   authentication?: string | null;
   archive?: boolean;
@@ -13,10 +13,8 @@ export interface Node {
   secret?: boolean;
   website: string;
   websiteURL?: string;
-  rpcStatus: boolean;
-  lcdStatus?: boolean;
-  grpcStatus?: boolean;
-  wsStatus?: boolean;
+  endpoints: IEndpoint[];
+  env: string;
 }
 
 export const mainnetNodes: Node[] = data['mainnet'];
