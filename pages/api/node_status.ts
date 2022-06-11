@@ -16,6 +16,10 @@ export default async function handler(
     query: { chainId, name, endpointType, env },
   } = req;
 
+  console.log(
+    `node_status handler chainId=${chainId}, name=${name}, endpointType=${endpointType}, env=${env}`
+  );
+
   let nodes;
 
   if (env === 'mainnet') {
@@ -77,6 +81,9 @@ export default async function handler(
 
   const nodeStatus = new NodeStatus(nodeEndpointUrl, type, chainId);
   const status = await nodeStatus.checkStatus();
+  console.log(
+    `node_status result name=${name}, chainId=${chainId}, node_status=${status}, \n url=${nodeEndpointUrl}`
+  );
 
   res.status(200).json({ endpointStatus: status });
 }

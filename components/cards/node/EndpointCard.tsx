@@ -27,10 +27,23 @@ const EndpointCard: React.FC<IEndpoint> = ({
       )
     ).json();
 
-  const { isLoading, isError, status, error } = useQuery(
-    'endpointData',
+  const { isLoading, isError, data, error } = useQuery(
+    `endpointData_${env}_${chainId}_${type}_${name}`,
     getStatus
   );
+
+  if (error !== null) {
+    console.log(`error=${JSON.stringify(error)}`);
+  }
+
+  if (isLoading) {
+    return <div>Loading</div>;
+  }
+  console.log(`data=${JSON.stringify(data)}`);
+  let status;
+  if (!isError && data !== undefined) {
+    status = data.endpointStatus;
+  }
 
   return (
     <div className={styles.container}>

@@ -1,10 +1,10 @@
 {
   "mainnet": [
     {
-      "name": "Trivium Network",
+      "name": "Ronin Ventures",
       "price": "Free",
-      "websiteURL": "https://trivium.network",
-      "website": "Trivium Network",
+      "websiteURL": "https://roninventures.io",
+      "website": "Ronin Ventures",
       "chainId": "secret-4",
       "endpoints": [
         {
@@ -22,33 +22,29 @@
       ]
     },
     {
-      "name": "Griptape.JS",
+      "name": "Digiline",
       "price": "Free",
-      "website": "https://griptapejs.com",
-      "websiteURL": "https://griptapejs.com",
+      "websiteURL": "https://scrt-validator.digiline.io/",
+      "website": "Digiline Validator",
       "chainId": "secret-4",
       "endpoints": [
         {
           "type": "RPC",
-          "url": "https://rpc.pulsar.griptapejs.com/"
-        },
-        {
-          "type": "LCD",
-          "url": "https://lcd.pulsar.griptapejs.com/"
+          "url": "https://scrt-validator.digiline.io:26657/"
         },
         {
           "type": "GRPC_WEB",
-          "url": "http://rpc.pulsar.griptapejs.com:9091/"
+          "url": "http://scrt-validator.digiline.io:9091/"
         }
       ]
     }
   ],
   "testnet": [
     {
-      "name": "Trivium Network",
+      "name": "Ronin Ventures",
       "price": "Free",
-      "website": "https://trivium.network/",
-      "websiteURL": "https://trivium.network/",
+      "websiteURL": "https://roninventures.io",
+      "website": "Ronin Ventures",
       "chainId": "pulsar-2",
       "endpoints": [
         {
@@ -62,6 +58,23 @@
         {
           "type": "GRPC_WEB",
           "url": "https://testnet-web-rpc.roninventures.io/"
+        }
+      ]
+    },
+    {
+      "name": "Trivium Network",
+      "price": "Free",
+      "website": "https://trivium.network/",
+      "websiteURL": "https://trivium.network/",
+      "chainId": "pulsar-2",
+      "endpoints": [
+        {
+          "type": "RPC",
+          "url": "https://pulsar-2.api.trivium.network:26657/"
+        },
+        {
+          "type": "LCD",
+          "url": "https://pulsar-2.api.trivium.network:1317/"
         }
       ]
     },

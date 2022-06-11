@@ -30,6 +30,7 @@ export class NodeStatus {
   async checkRpcStatus(): Promise<boolean> {
     const start = Date.now();
     const headers: any = { 'Content-Type': 'application/json' };
+    let status = false;
     try {
       const result = await fetch(this.endpoint + 'status', {
         method: 'GET',
@@ -38,23 +39,27 @@ export class NodeStatus {
       if (result.status !== 200) {
         console.log(this.endpoint, 'failed');
         console.log(await result.text());
-        return false;
+        return status;
       }
       const json = await result.json();
 
       this.logTiming(start, this.endpoint);
-      return !!json.result;
+      status = !!json.result;
     } catch (e: any) {
       console.warn(e.message || e);
 
       this.logTiming(start, this.endpoint);
-      return false;
+      return status;
     }
+
+    console.log(`checkRpcStatus endpoint=${this.endpoint}, status=${status}`);
+    return status;
   }
 
   async checkLcdStatus(): Promise<boolean> {
     const start = Date.now();
     const headers: any = { 'Content-Type': 'application/json' };
+    let status = false;
     try {
       const result = await fetch(this.endpoint + 'syncing', {
         method: 'GET',
@@ -63,18 +68,19 @@ export class NodeStatus {
       if (result.status !== 200) {
         console.log(this.endpoint, 'failed');
         console.log(await result.text());
-        return false;
+        return status;
       }
       const json = await result.json();
 
       this.logTiming(start, this.endpoint);
-      return json['syncing'] === false;
+      status = json['syncing'] === false;
     } catch (e: any) {
       console.warn(e.message || e);
 
       this.logTiming(start, this.endpoint);
-      return false;
+      return status;
     }
+    return status;
   }
 
   async checkGrcpWebStatus(): Promise<boolean> {
@@ -83,6 +89,7 @@ export class NodeStatus {
     }
     console.log(`checking grpc web status with url ${this.endpoint}`);
 
+    let status = false;
     const start = Date.now();
     try {
       const secretjs = await SecretNetworkClient.create({
@@ -92,13 +99,15 @@ export class NodeStatus {
 
       const result = await secretjs.query.tendermint.getSyncing({});
       this.logTiming(start, this.endpoint);
-      return result['syncing'] === false;
+      status = result['syncing'] === false;
     } catch (e: any) {
       console.warn(e.message || e);
 
       this.logTiming(start, this.endpoint);
-      return false;
+      return status;
     }
+    console.log(`checkGrpcStatus endpoint=${this.endpoint}, status=${status}`);
+    return status;
   }
 
   async checkStatus(): Promise<boolean> {
