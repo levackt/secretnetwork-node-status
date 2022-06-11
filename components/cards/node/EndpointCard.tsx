@@ -32,8 +32,6 @@ const EndpointCard: React.FC<IEndpoint> = ({
     getStatus
   );
 
-  if (isLoading) return 'Loading...';
-
   return (
     <div className={styles.container}>
       <div>
@@ -49,7 +47,11 @@ const EndpointCard: React.FC<IEndpoint> = ({
             <Typography sx={{ mb: 1.5 }} color="text.primary">
               {type}
             </Typography>
-            <TrafficOutlinedIcon color={status ? 'success' : 'error'} />
+
+            {isLoading && <TrafficOutlinedIcon color={'warning'} />}
+            {!isLoading && (
+              <TrafficOutlinedIcon color={status ? 'success' : 'error'} />
+            )}
             <Typography sx={{ mb: 1.5 }} color="text.secondary">
               {url}
             </Typography>
