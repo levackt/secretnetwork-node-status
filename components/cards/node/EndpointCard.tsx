@@ -1,17 +1,16 @@
 import TrafficOutlinedIcon from '@mui/icons-material/TrafficOutlined';
 import Box from '@mui/material/Box';
-import Snackbar from '@mui/material/Snackbar';
 import Typography from '@mui/material/Typography';
 import React from 'react';
 import { useQuery } from 'react-query';
 import styles from './NodeCard.module.css';
 
 export interface IEndpoint {
+  name: string;
+  chainId: string;
   type: string;
   url: string;
-  name: string;
   env: string;
-  chainId: string;
 }
 
 const EndpointCard: React.FC<IEndpoint> = ({
@@ -21,8 +20,6 @@ const EndpointCard: React.FC<IEndpoint> = ({
   url,
   env,
 }) => {
-  const [open, setOpen] = React.useState(false);
-
   const getStatus = async () =>
     await (
       await fetch(
@@ -37,33 +34,10 @@ const EndpointCard: React.FC<IEndpoint> = ({
 
   if (isLoading) return 'Loading...';
 
-  const handleOpen = (event: React.SyntheticEvent | Event, reason?: string) => {
-    console.log('opening');
-    setOpen(true);
-  };
-
-  const handleClose = (
-    event: React.SyntheticEvent | Event,
-    reason?: string
-  ) => {
-    if (reason === 'clickaway') {
-      return;
-    }
-
-    setOpen(false);
-  };
-
   return (
     <div className={styles.container}>
       <div>
-        <div className={styles.card__header}>
-          <Snackbar
-            open={open}
-            autoHideDuration={1000}
-            onClose={handleClose}
-            message="URL copied"
-          />
-        </div>
+        <div className={styles.card__header}></div>
         <div>
           <Box
             sx={{
