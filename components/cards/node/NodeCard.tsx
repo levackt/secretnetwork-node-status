@@ -22,7 +22,6 @@ export interface INodeCard {
   price?: string;
   secret?: boolean;
   website: string;
-  websiteURL?: string;
   endpoints: IEndpoint[];
   env: string;
 }
@@ -32,7 +31,6 @@ const NodeCard: React.FC<INodeCard> = ({
   endpoints,
   chainId,
   website,
-  websiteURL,
   env,
 }) => {
   const [open, setOpen] = React.useState(false);
@@ -99,7 +97,7 @@ const NodeCard: React.FC<INodeCard> = ({
             <Button
               style={{ textTransform: 'lowercase' }}
               size="small"
-              href={websiteURL || website}
+              href={website}
             >
               {website}
             </Button>

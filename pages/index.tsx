@@ -33,7 +33,6 @@ const Home: NextPage = () => {
                 chainId={item.chainId}
                 env="mainnet"
                 website={item.website}
-                websiteURL={item.websiteURL}
                 key={index}
               />
             );
@@ -52,7 +51,6 @@ const Home: NextPage = () => {
                 chainId={item.chainId}
                 env="testnet"
                 website={item.website}
-                websiteURL={item.websiteURL}
                 key={index}
               />
             );

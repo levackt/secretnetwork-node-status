@@ -9,7 +9,6 @@ type ResponseData = {
       price: string;
       chainId: string;
       website?: string;
-      websiteURL?: string;
       endpoints: [
         {
           type: string;

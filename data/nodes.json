@@ -3,8 +3,7 @@
     {
       "name": "Ronin Ventures",
       "price": "Free",
-      "websiteURL": "https://roninventures.io",
-      "website": "Ronin Ventures",
+      "website": "https://roninventures.io",
       "chainId": "secret-4",
       "endpoints": [
         {
@@ -22,10 +21,9 @@
       ]
     },
     {
-      "name": "Digiline",
+      "name": "Digiline Validator",
       "price": "Free",
-      "websiteURL": "https://scrt-validator.digiline.io/",
-      "website": "Digiline Validator",
+      "website": "https://scrt-validator.digiline.io/",
       "chainId": "secret-4",
       "endpoints": [
         {
@@ -43,8 +41,7 @@
     {
       "name": "Ronin Ventures",
       "price": "Free",
-      "websiteURL": "https://roninventures.io",
-      "website": "Ronin Ventures",
+      "website": "https://roninventures.io",
       "chainId": "pulsar-2",
       "endpoints": [
         {
@@ -65,7 +62,6 @@
       "name": "Trivium Network",
       "price": "Free",
       "website": "https://trivium.network/",
-      "websiteURL": "https://trivium.network/",
       "chainId": "pulsar-2",
       "endpoints": [
         {
@@ -82,7 +78,6 @@
       "name": "Griptape.JS",
       "price": "Free",
       "website": "https://griptapejs.com",
-      "websiteURL": "https://griptapejs.com",
       "chainId": "pulsar-2",
       "endpoints": [
         {
@@ -103,7 +98,6 @@
       "name": "Secure Secrets",
       "price": "Free",
       "website": "https://www.securesecrets.org",
-      "websiteURL": "https://www.securesecrets.org",
       "chainId": "pulsar-2",
       "endpoints": [
         {
