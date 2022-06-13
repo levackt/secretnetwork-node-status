@@ -1,6 +1,21 @@
 {
   "mainnet": [
     {
+      "name": "Community API",
+      "price": "Free",
+      "chainId": "secret-4",
+      "endpoints": [
+        {
+          "type": "RPC",
+          "url": "https://rpc.scrt.network/"
+        },
+        {
+          "type": "LCD",
+          "url": "https://api.scrt.network/"
+        }
+      ]
+    },
+    {
       "name": "Block Pane",
       "price": "Free",
       "website": "https://blockpane.com",
