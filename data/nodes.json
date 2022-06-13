@@ -1,6 +1,26 @@
 {
   "mainnet": [
     {
+      "name": "Block Pane",
+      "price": "Free",
+      "website": "https://blockpane.com",
+      "chainId": "secret-4",
+      "endpoints": [
+        {
+          "type": "RPC",
+          "url": "https://scrt-rpc.blockpane.com/"
+        },
+        {
+          "type": "LCD",
+          "url": "https://scrt-lcd.blockpane.com/"
+        },
+        {
+          "type": "GRPC_WEB",
+          "url": "http://scrt-rpc.blockpane.com:9091/"
+        }
+      ]
+    },
+    {
       "name": "Ronin Ventures",
       "price": "Free",
       "website": "https://roninventures.io",
@@ -33,17 +53,6 @@
         {
           "type": "GRPC_WEB",
           "url": "http://scrt-validator.digiline.io:9091/"
-        }
-      ]
-    },
-    {
-      "name": "Azure API",
-      "price": "Free",
-      "chainId": "secret-4",
-      "endpoints": [
-        {
-          "type": "GRPC_WEB",
-          "url": "https://grpc-web.azure-api.net/"
         }
       ]
     },
