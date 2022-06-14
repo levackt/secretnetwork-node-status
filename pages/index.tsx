@@ -1,3 +1,4 @@
+import Link from '@mui/material/Link';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -19,6 +20,10 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
+        <Link href="https://github.com/scrtlabs/api-registry">
+          Please add your endpoints to Secret Network API Registry
+        </Link>
+
         <h1 className={styles.title}>Secret Network Nodes</h1>
 
         <div>
