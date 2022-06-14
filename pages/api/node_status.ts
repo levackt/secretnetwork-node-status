@@ -16,6 +16,11 @@ export default async function handler(
     query: { chainId, name, endpointType, env },
   } = req;
 
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=60, stale-while-revalidate=59'
+  );
+
   console.log(
     `node_status handler chainId=${chainId}, name=${name}, endpointType=${endpointType}, env=${env}`
   );
