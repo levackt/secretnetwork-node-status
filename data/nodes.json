@@ -100,15 +100,15 @@
       "endpoints": [
         {
           "type": "RPC",
-          "url": "http://rpc.pulsar.scrttestnet.com/"
+          "url": "https://rpc.pulsar.scrttestnet.com/"
         },
         {
           "type": "LCD",
-          "url": "http://api.pulsar.scrttestnet.com/"
+          "url": "https://api.pulsar.scrttestnet.com/"
         },
         {
           "type": "GRPC_WEB",
-          "url": "http://grpc.pulsar.scrttestnet.com/"
+          "url": "https://grpc.pulsar.scrttestnet.com/"
         }
       ]
     },
