@@ -96,7 +96,6 @@
     {
       "name": "SCRT Testnet (Community endpoints)",
       "price": "Free",
-      "website": "https://scrttestnet.com",
       "chainId": "pulsar-2",
       "endpoints": [
         {
@@ -116,7 +115,6 @@
     {
       "name": "Secret Saturn",
       "price": "Free",
-      "website": "https://secretsaturn.net",
       "chainId": "pulsar-2",
       "endpoints": [
         {
