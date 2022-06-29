@@ -119,15 +119,15 @@
       "endpoints": [
         {
           "type": "RPC",
-          "url": "http://rpc.testnet.secretsaturn.net/"
+          "url": "https://rpc.testnet.secretsaturn.net/"
         },
         {
           "type": "LCD",
-          "url": "http://lcd.testnet.secretsaturn.net/"
+          "url": "https://lcd.testnet.secretsaturn.net/"
         },
         {
           "type": "GRPC_WEB",
-          "url": "http://grpc.testnet.secretsaturn.net/"
+          "url": "https://grpc.testnet.secretsaturn.net/"
         }
       ]
     },
