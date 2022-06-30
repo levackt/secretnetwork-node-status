@@ -53,7 +53,7 @@ const NodeCard: React.FC<INodeCard> = ({
 
   return (
     <div className={styles.container}>
-      <div>
+      <div className={styles.nodeCard}>
         <div className={styles.card__header}>
           <Snackbar
             open={open}

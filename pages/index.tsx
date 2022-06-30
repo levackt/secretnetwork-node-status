@@ -1,3 +1,4 @@
+import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -29,50 +30,56 @@ const Home: NextPage = () => {
         <div>
           <h5 className={styles.environment}>Mainnet</h5>
         </div>
-        <div className={styles.grid}>
+
+        <Grid container spacing={1} justifyContent="center">
           {mainnetNodes.map((item: any, index: any) => {
             return (
-              <NodeCard
-                name={item.name}
-                endpoints={item.endpoints}
-                chainId={item.chainId}
-                env="mainnet"
-                website={item.website}
-                key={index}
-              />
+              <Grid key={index}>
+                <NodeCard
+                  name={item.name}
+                  endpoints={item.endpoints}
+                  chainId={item.chainId}
+                  env="mainnet"
+                  website={item.website}
+                />
+              </Grid>
             );
           })}
-        </div>
+        </Grid>
 
         <div>
           <h5 className={styles.environment}>Testnet</h5>
         </div>
-        <div className={styles.grid}>
+        <Grid container spacing={1} justifyContent="center">
           {testnetNodes.map((item: any, index: any) => {
             return (
-              <NodeCard
-                name={item.name}
-                endpoints={item.endpoints}
-                chainId={item.chainId}
-                env="testnet"
-                website={item.website}
-                key={index}
-              />
+              <Grid key={index}>
+                <NodeCard
+                  name={item.name}
+                  endpoints={item.endpoints}
+                  chainId={item.chainId}
+                  env="testnet"
+                  website={item.website}
+                />
+              </Grid>
             );
           })}
-        </div>
+        </Grid>
       </main>
 
       <footer className={styles.footer}>
-        {/* todo footer */}
         <a
           href="https://scrt.network/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
           <span className={styles.logo}>
-            <Image src="/Secret.svg" alt="Secret Logo" width={72} height={16} />
+            <Image
+              src="/Secret.svg"
+              alt="Secret Logo"
+              width={100}
+              height={50}
+            />
           </span>
         </a>
       </footer>

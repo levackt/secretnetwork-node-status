@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import React from 'react';
 import { useQuery } from 'react-query';
-import styles from './NodeCard.module.css';
+import styles from './EndpointCard.module.css';
 
 export interface IEndpoint {
   name: string;
@@ -57,15 +57,31 @@ const EndpointCard: React.FC<IEndpoint> = ({
               p: 1,
             }}
           >
-            <Typography sx={{ mb: 1.5 }} color="text.primary">
+            <Typography
+              sx={{ mb: 1.5 }}
+              color="text.primary"
+              className={styles.endpointType}
+            >
               {type}
             </Typography>
 
-            {isLoading && <TrafficOutlinedIcon color={'warning'} />}
-            {!isLoading && (
-              <TrafficOutlinedIcon color={status ? 'success' : 'error'} />
+            {isLoading && (
+              <TrafficOutlinedIcon
+                color={'warning'}
+                className={styles.endpointStatus}
+              />
             )}
-            <Typography sx={{ mb: 1.5 }} color="text.secondary">
+            {!isLoading && (
+              <TrafficOutlinedIcon
+                color={status ? 'success' : 'error'}
+                className={styles.endpointStatus}
+              />
+            )}
+            <Typography
+              sx={{ mb: 1.5 }}
+              color="text.secondary"
+              className={styles.endpointUrl}
+            >
               {url}
             </Typography>
           </Box>

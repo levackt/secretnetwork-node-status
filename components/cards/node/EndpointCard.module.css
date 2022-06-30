@@ -1,9 +1,5 @@
 .container {
   margin: 1rem;
-  display: grid;
-  grid-template-rows: repeat(auto-fit, 1fr);
-  grid-template-columns: 3;
-  gap: 8px;
 }
 
 .container * {
@@ -13,21 +9,13 @@
   gap: 1rem;
   place-items: center;
   max-width: 100%;
-
-  overflow-wrap: break-word;
-}
-
-.card__image {
-  max-width: 100%;
-  display: block;
-  object-fit: cover;
 }
 
 .card {
   font-family: 'Quicksand', sans-serif;
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: clamp(20rem, calc(20rem + 2vw), 22rem);
   overflow: hidden;
   box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
   border-radius: 1em;
@@ -42,6 +30,25 @@
   gap: 0.5rem;
 }
 
+.status {
+  align-self: flex-start;
+  padding: 0.25em 0.75em;
+  border-radius: 1em;
+  font-size: 0.75rem;
+}
+
+.status-blue {
+  background: #56ccf2;
+  background: linear-gradient(to bottom, #2f80ed, #56ccf2);
+  color: #fafafa;
+}
+
+.status-red {
+  background: #f25656;
+  background: linear-gradient(to bottom, #ed2f2f, #f26856);
+  color: #fafafa;
+}
+
 .card__body h4 {
   font-size: 1.5rem;
   text-transform: capitalize;
@@ -51,4 +58,14 @@
   display: flex;
   padding: 1rem;
   margin-top: auto;
+}
+
+.endpointType {
+  width: 100px;
+}
+.endpointUrl {
+  width: 300px;
+}
+.endpointStatus {
+  width: 40px;
 }
