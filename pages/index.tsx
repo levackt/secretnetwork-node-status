@@ -1,5 +1,11 @@
+import WarningAmberIcon from '@mui/icons-material/WarningAmber';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
+import ToggleButton from '@mui/material/ToggleButton';
+import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
+import Typography from '@mui/material/Typography';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -9,6 +15,15 @@ import { mainnetNodes, testnetNodes } from '../data/Nodes';
 import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
+  const [environment, setEnvironment] = React.useState('Mainnet');
+
+  const handleChange = (
+    event: React.MouseEvent<HTMLElement>,
+    newEnvironment: string
+  ) => {
+    setEnvironment(newEnvironment);
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -21,50 +36,73 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
+        <h1 className={styles.title}>Secret Network Nodes</h1>
         <Link href="https://github.com/scrtlabs/api-registry">
           Please add your endpoints to Secret Network API Registry
         </Link>
+        <p>
+          <WarningAmberIcon color="warning" />
+          Public APIs. Do not use in production apps! These endpoints are
+          offered to the community for free, please be mindful and don&apos;t
+          spam them.
+          <WarningAmberIcon color="warning" />
+        </p>
 
-        <h1 className={styles.title}>Secret Network Nodes</h1>
+        <ToggleButtonGroup
+          color="primary"
+          value={environment}
+          exclusive
+          onChange={handleChange}
+        >
+          <ToggleButton value="Mainnet">Mainnet</ToggleButton>
+          <ToggleButton value="Testnet">Testnet</ToggleButton>
+        </ToggleButtonGroup>
 
-        <div>
-          <h5 className={styles.environment}>Mainnet</h5>
-        </div>
-
-        <Grid container spacing={1} justifyContent="center">
-          {mainnetNodes.map((item: any, index: any) => {
-            return (
-              <Grid key={index}>
-                <NodeCard
-                  name={item.name}
-                  endpoints={item.endpoints}
-                  chainId={item.chainId}
-                  env="mainnet"
-                  website={item.website}
-                />
+        {environment === 'Mainnet' && (
+          <Card>
+            <CardContent>
+              <Typography className={styles.environment}>Mainnet</Typography>
+              <Grid container spacing={1} justifyContent="center">
+                {mainnetNodes.map((item: any, index: any) => {
+                  return (
+                    <Grid key={index}>
+                      <NodeCard
+                        name={item.name}
+                        endpoints={item.endpoints}
+                        chainId={item.chainId}
+                        env="mainnet"
+                        website={item.website}
+                      />
+                    </Grid>
+                  );
+                })}
               </Grid>
-            );
-          })}
-        </Grid>
+            </CardContent>
+          </Card>
+        )}
 
-        <div>
-          <h5 className={styles.environment}>Testnet</h5>
-        </div>
-        <Grid container spacing={1} justifyContent="center">
-          {testnetNodes.map((item: any, index: any) => {
-            return (
-              <Grid key={index}>
-                <NodeCard
-                  name={item.name}
-                  endpoints={item.endpoints}
-                  chainId={item.chainId}
-                  env="testnet"
-                  website={item.website}
-                />
+        {environment === 'Testnet' && (
+          <Card>
+            <CardContent>
+              <Typography className={styles.environment}>Testnet</Typography>
+              <Grid container spacing={1} justifyContent="center">
+                {testnetNodes.map((item: any, index: any) => {
+                  return (
+                    <Grid key={index}>
+                      <NodeCard
+                        name={item.name}
+                        endpoints={item.endpoints}
+                        chainId={item.chainId}
+                        env="testnet"
+                        website={item.website}
+                      />
+                    </Grid>
+                  );
+                })}
               </Grid>
-            );
-          })}
-        </Grid>
+            </CardContent>
+          </Card>
+        )}
       </main>
 
       <footer className={styles.footer}>

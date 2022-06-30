@@ -32,7 +32,7 @@ export class NodeStatus {
     const headers: any = { 'Content-Type': 'application/json' };
     let status = false;
     try {
-      const result = await fetch(this.endpoint + 'status', {
+      const result = await fetch(this.endpoint + '/status', {
         method: 'GET',
         headers,
       });
@@ -61,7 +61,7 @@ export class NodeStatus {
     const headers: any = { 'Content-Type': 'application/json' };
     let status = false;
     try {
-      const result = await fetch(this.endpoint + 'syncing', {
+      const result = await fetch(this.endpoint + '/syncing', {
         method: 'GET',
         headers,
       });

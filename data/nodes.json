@@ -7,11 +7,11 @@
       "endpoints": [
         {
           "type": "RPC",
-          "url": "https://rpc.scrt.network/"
+          "url": "https://rpc.scrt.network"
         },
         {
           "type": "LCD",
-          "url": "https://api.scrt.network/"
+          "url": "https://api.scrt.network"
         }
       ]
     },
@@ -23,15 +23,15 @@
       "endpoints": [
         {
           "type": "RPC",
-          "url": "https://scrt-rpc.blockpane.com/"
+          "url": "https://scrt-rpc.blockpane.com"
         },
         {
           "type": "LCD",
-          "url": "https://scrt-lcd.blockpane.com/"
+          "url": "https://scrt-lcd.blockpane.com"
         },
         {
           "type": "GRPC_WEB",
-          "url": "http://scrt-rpc.blockpane.com:9091/"
+          "url": "http://scrt-rpc.blockpane.com:9091"
         }
       ]
     },
@@ -43,51 +43,51 @@
       "endpoints": [
         {
           "type": "RPC",
-          "url": "https://rpc.roninventures.io/"
+          "url": "https://rpc.roninventures.io"
         },
         {
           "type": "LCD",
-          "url": "https://api.roninventures.io/"
+          "url": "https://api.roninventures.io"
         },
         {
           "type": "GRPC_WEB",
-          "url": "https://web-rpc.roninventures.io/"
+          "url": "https://web-rpc.roninventures.io"
         }
       ]
     },
     {
       "name": "Digiline Validator",
       "price": "Free",
-      "website": "https://scrt-validator.digiline.io/",
+      "website": "https://scrt-validator.digiline.io",
       "chainId": "secret-4",
       "endpoints": [
         {
           "type": "RPC",
-          "url": "https://scrt-validator.digiline.io:26657/"
+          "url": "https://scrt-validator.digiline.io:26657"
         },
         {
           "type": "GRPC_WEB",
-          "url": "http://scrt-validator.digiline.io:9091/"
+          "url": "http://scrt-validator.digiline.io:9091"
         }
       ]
     },
     {
       "name": "Trivium Network",
       "price": "Free",
-      "website": "https://trivium.network/",
+      "website": "https://trivium.network",
       "chainId": "secret-4",
       "endpoints": [
         {
           "type": "RPC",
-          "url": "https://secret-4.api.trivium.network:26657/"
+          "url": "https://secret-4.api.trivium.network:26657"
         },
         {
           "type": "LCD",
-          "url": "https://secret-4.api.trivium.network:1317/"
+          "url": "https://secret-4.api.trivium.network:1317"
         },
         {
           "type": "GRPC_WEB",
-          "url": "https://secret-4.api.trivium.network:9091/"
+          "url": "https://secret-4.api.trivium.network:9091"
         }
       ]
     }
@@ -100,15 +100,15 @@
       "endpoints": [
         {
           "type": "RPC",
-          "url": "https://rpc.pulsar.scrttestnet.com/"
+          "url": "https://rpc.pulsar.scrttestnet.com"
         },
         {
           "type": "LCD",
-          "url": "https://api.pulsar.scrttestnet.com/"
+          "url": "https://api.pulsar.scrttestnet.com"
         },
         {
           "type": "GRPC_WEB",
-          "url": "https://grpc.pulsar.scrttestnet.com/"
+          "url": "https://grpc.pulsar.scrttestnet.com"
         }
       ]
     },
@@ -119,15 +119,15 @@
       "endpoints": [
         {
           "type": "RPC",
-          "url": "https://rpc.testnet.secretsaturn.net/"
+          "url": "https://rpc.testnet.secretsaturn.net"
         },
         {
           "type": "LCD",
-          "url": "https://lcd.testnet.secretsaturn.net/"
+          "url": "https://lcd.testnet.secretsaturn.net"
         },
         {
           "type": "GRPC_WEB",
-          "url": "https://grpc.testnet.secretsaturn.net/"
+          "url": "https://grpc.testnet.secretsaturn.net"
         }
       ]
     },
@@ -139,31 +139,31 @@
       "endpoints": [
         {
           "type": "RPC",
-          "url": "https://testnet-rpc.roninventures.io/"
+          "url": "https://testnet-rpc.roninventures.io"
         },
         {
           "type": "LCD",
-          "url": "https://testnet-api.roninventures.io/"
+          "url": "https://testnet-api.roninventures.io"
         },
         {
           "type": "GRPC_WEB",
-          "url": "https://testnet-web-rpc.roninventures.io/"
+          "url": "https://testnet-web-rpc.roninventures.io"
         }
       ]
     },
     {
       "name": "Trivium Network",
       "price": "Free",
-      "website": "https://trivium.network/",
+      "website": "https://trivium.network",
       "chainId": "pulsar-2",
       "endpoints": [
         {
           "type": "RPC",
-          "url": "https://pulsar-2.api.trivium.network:26657/"
+          "url": "https://pulsar-2.api.trivium.network:26657"
         },
         {
           "type": "LCD",
-          "url": "https://pulsar-2.api.trivium.network:1317/"
+          "url": "https://pulsar-2.api.trivium.network:1317"
         }
       ]
     },
@@ -175,7 +175,7 @@
       "endpoints": [
         {
           "type": "LCD",
-          "url": "http://testnet.securesecrets.org:1317/"
+          "url": "http://testnet.securesecrets.org:1317"
         }
       ]
     }
