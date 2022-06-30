@@ -2,7 +2,6 @@ import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import Snackbar from '@mui/material/Snackbar';
 import Typography from '@mui/material/Typography';
 import React from 'react';
 import EndpointCard from './EndpointCard';
@@ -33,35 +32,10 @@ const NodeCard: React.FC<INodeCard> = ({
   website,
   env,
 }) => {
-  const [open, setOpen] = React.useState(false);
-
-  const handleOpen = (event: React.SyntheticEvent | Event, reason?: string) => {
-    console.log('opening');
-    setOpen(true);
-  };
-
-  const handleClose = (
-    event: React.SyntheticEvent | Event,
-    reason?: string
-  ) => {
-    if (reason === 'clickaway') {
-      return;
-    }
-
-    setOpen(false);
-  };
-
   return (
     <div className={styles.container}>
       <div className={styles.nodeCard}>
-        <div className={styles.card__header}>
-          <Snackbar
-            open={open}
-            autoHideDuration={1000}
-            onClose={handleClose}
-            message="URL copied"
-          />
-        </div>
+        <div className={styles.card__header}></div>
         <Card sx={{ minWidth: 275 }} className={styles.card}>
           <CardContent>
             <Typography
