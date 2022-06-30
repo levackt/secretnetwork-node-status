@@ -90,6 +90,54 @@
           "url": "https://secret-4.api.trivium.network:9091"
         }
       ]
+    },
+    {
+      "name": "Consensus One",
+      "price": "Free",
+      "website": "https://www.consensus.one/",
+      "chainId": "secret-4",
+      "endpoints": [
+        {
+          "type": "RPC",
+          "url": "https://secret.rpc.consensus.one"
+        },
+        {
+          "type": "LCD",
+          "url": "https://secret.api.consensus.one"
+        }
+      ]
+    },
+    {
+      "name": "Stakely.io",
+      "price": "Free",
+      "website": "https://stakely.io",
+      "chainId": "secret-4",
+      "endpoints": [
+        {
+          "type": "RPC",
+          "url": "https://secretnetwork-rpc.stakely.io"
+        },
+        {
+          "type": "LCD",
+          "url": "https://secretnetwork-lcd.stakely.io"
+        }
+      ]
+    },
+    {
+      "name": "Forbole",
+      "price": "Free",
+      "website": "https://www.forbole.com/",
+      "chainId": "secret-4",
+      "endpoints": [
+        {
+          "type": "RPC",
+          "url": "https://rpc.secret.forbole.com/"
+        },
+        {
+          "type": "LCD",
+          "url": "https://api.secret.forbole.com/"
+        }
+      ]
     }
   ],
   "testnet": [
