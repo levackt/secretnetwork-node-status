@@ -36,26 +36,6 @@
       ]
     },
     {
-      "name": "Ronin Ventures",
-      "price": "Free",
-      "website": "https://roninventures.io",
-      "chainId": "secret-4",
-      "endpoints": [
-        {
-          "type": "RPC",
-          "url": "https://rpc.roninventures.io"
-        },
-        {
-          "type": "LCD",
-          "url": "https://api.roninventures.io"
-        },
-        {
-          "type": "GRPC_WEB",
-          "url": "https://web-rpc.roninventures.io"
-        }
-      ]
-    },
-    {
       "name": "Digiline Validator",
       "price": "Free",
       "website": "https://scrt-validator.digiline.io",
@@ -176,26 +156,6 @@
         {
           "type": "GRPC_WEB",
           "url": "https://grpc.testnet.secretsaturn.net"
-        }
-      ]
-    },
-    {
-      "name": "Ronin Ventures",
-      "price": "Free",
-      "website": "https://roninventures.io",
-      "chainId": "pulsar-2",
-      "endpoints": [
-        {
-          "type": "RPC",
-          "url": "https://testnet-rpc.roninventures.io"
-        },
-        {
-          "type": "LCD",
-          "url": "https://testnet-api.roninventures.io"
-        },
-        {
-          "type": "GRPC_WEB",
-          "url": "https://testnet-web-rpc.roninventures.io"
         }
       ]
     },

@@ -1,5 +1,5 @@
 {
-  "name": "secretnetwork-nodes-fullstack",
+  "name": "secretnetwork-nodes",
   "version": "0.1.0",
   "private": true,
   "scripts": {
