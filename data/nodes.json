@@ -118,6 +118,26 @@
           "url": "https://api.secret.forbole.com/"
         }
       ]
+    },
+    {
+      "name": "AgoraNodes",
+      "price": "Free",
+      "website": "https://agoranodes.com/",
+      "chainId": "secret-4",
+      "endpoints": [
+        {
+          "type": "RPC",
+          "url": "https://scrt-rpc.agoranodes.com"
+        },
+        {
+          "type": "LCD",
+          "url": "https://scrt-lcd.agoranodes.com"
+        },
+        {
+          "type": "GRPC_WEB",
+          "url": "https://scrt-grpc.agoranodes.com"
+        }
+      ]
     }
   ],
   "testnet": [
