@@ -36,22 +36,6 @@
       ]
     },
     {
-      "name": "Digiline Validator",
-      "price": "Free",
-      "website": "https://scrt-validator.digiline.io",
-      "chainId": "secret-4",
-      "endpoints": [
-        {
-          "type": "RPC",
-          "url": "https://scrt-validator.digiline.io:26657"
-        },
-        {
-          "type": "GRPC_WEB",
-          "url": "http://scrt-validator.digiline.io:9091"
-        }
-      ]
-    },
-    {
       "name": "Trivium Network",
       "price": "Free",
       "website": "https://trivium.network",
@@ -116,6 +100,26 @@
         {
           "type": "LCD",
           "url": "https://api.secret.forbole.com/"
+        }
+      ]
+    },
+    {
+      "name": "AgoraNodes",
+      "price": "Free",
+      "website": "https://agoranodes.com/",
+      "chainId": "secret-4",
+      "endpoints": [
+        {
+          "type": "RPC",
+          "url": "https://rpc.spartanapi.dev"
+        },
+        {
+          "type": "LCD",
+          "url": "https://lcd.spartanapi.dev"
+        },
+        {
+          "type": "GRPC_WEB",
+          "url": "https://wgrpc.spartanapi.dev"
         }
       ]
     },
