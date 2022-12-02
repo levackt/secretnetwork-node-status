@@ -104,9 +104,9 @@
       ]
     },
     {
-      "name": "AgoraNodes",
+      "name": "Spartan",
       "price": "Free",
-      "website": "https://agoranodes.com/",
+      "website": "https://spartanapi.dev/",
       "chainId": "secret-4",
       "endpoints": [
         {
